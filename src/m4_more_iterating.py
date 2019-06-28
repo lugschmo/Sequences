@@ -33,7 +33,7 @@ def run_test_sum_sequence():
     print('--------------------------------------------------')
 
     # ------------------------------------------------------------------
-    # TODO: 2. READ the COMMENTS and CODE in this function,
+    # DONE: 2. READ the COMMENTS and CODE in this function,
     #  asking questions as needed.
     #
     #   When you believe that you understand:
@@ -221,7 +221,7 @@ def sum_sequence(sequence):
 def run_test_count_items_bigger_than():
     """ Tests the   count_items_bigger_than   function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this TEST function.
+    # DONE: 4. Implement this TEST function.
     #   It TESTS the  count_items_bigger_than  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests.
     #
@@ -347,6 +347,24 @@ def run_test_count_items_bigger_than():
 
     # TO DO 4 (continued):  Add your 2 ADDITIONAL tests here:
 
+    # Test 9:
+    sequence = [1, 1, 1, 1, 1, 1.1]
+    threshold = 1
+    expected = 1
+    actual = count_items_bigger_than(sequence, threshold)
+    print()
+    print('Test 9 expected:', expected)
+    print('       actual:  ', actual)
+
+    # Test 10:
+    sequence = [0, 0, 0, 0, 0, 0, 999]
+    threshold = 4788244995804
+    expected = 0
+    actual = count_items_bigger_than(sequence, threshold)
+    print()
+    print('Test 10 expected:', expected)
+    print('       actual:  ', actual)
+
 
 def count_items_bigger_than(numbers, threshold):
     """
@@ -382,9 +400,14 @@ def count_items_bigger_than(numbers, threshold):
       :type threshold: float
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
+    count = 0
+    for k in range(len(numbers)):
+        if numbers[k] > threshold:
+            count = count + 1
+    return count
 
 
 def run_test_count_positive_sines():
