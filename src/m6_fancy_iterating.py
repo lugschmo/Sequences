@@ -402,9 +402,12 @@ def print_items_at_odd_indices(sequence):
       33 is at index 5
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
+    for k in range(len(sequence)):
+        if k % 2 == 1:
+            print(sequence[k], 'is at index', k)
 
 
 # ----------------------------------------------------------------------
